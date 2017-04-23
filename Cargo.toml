@@ -1,0 +1,26 @@
+[package]
+name = "hack_log"
+version = "0.1.0"
+authors = ["Jianing Yang <jianingy.yang@gmail.com>"]
+description = "A minimalistic logging formatter"
+repository = "https://github.com/jianingy/hack_log"
+readme = "README.md"
+keywords = ["log", "logging"]
+license = "MIT"
+include = [
+    "**/*.rs",
+    "Cargo.toml",
+    "README.md",
+]
+
+[dependencies]
+ansi_term = {version = "0.9", optional = true}
+clap = "2.21"
+env_logger = "0.4"
+lazy_static = "0.2"
+log = "0.3"
+
+
+[features]
+default = []
+color = ["ansi_term"]
